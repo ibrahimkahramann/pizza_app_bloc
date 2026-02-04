@@ -10,7 +10,7 @@ class Pizza {
   String description;
   double price;
   double discount;
-  List<Macros> macros;
+  Macros macros;
 
   Pizza(
       {required this.pizzaId,
@@ -33,7 +33,7 @@ class Pizza {
         description: description,
         price: price,
         discount: discount,
-        macros: macros
+        macros: macros,
         );
   }
 
@@ -47,7 +47,7 @@ class Pizza {
         description: entity.description,
         price: entity.price,
         discount: entity.discount,
-        macros: macros
+        macros: entity.macros
         );
   }
 }
