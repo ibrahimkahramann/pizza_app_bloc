@@ -15,8 +15,11 @@ dependencies:
     sdk: flutter
   flutter_bloc: ^9.1.0
   font_awesome_flutter: ^10.12.0
+  
   user_repository:
     path: packages/user_repository
+  pizza_repository:
+    path: packages/pizza_repository
 
 dev_dependencies:
   flutter_lints: ^5.0.0
