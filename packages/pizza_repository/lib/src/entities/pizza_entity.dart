@@ -8,8 +8,8 @@ class PizzaEntity {
   int spicy;
   String name;
   String description;
-  double price;
-  double discount;
+  int price;
+  int discount;
   Macros macros;
 
   PizzaEntity(
@@ -42,11 +42,11 @@ class PizzaEntity {
       pizzaId: doc['pizzaId'] as String,
       picture: doc['picture'] as String,
       isVeg: doc['isVeg'] as bool,
-      spicy: doc['spicy'] as int,
+      spicy: doc['spicy'] as int? ?? 0,
       name: doc['name'] as String,
       description: doc['description'] as String,
-      price: doc['price'] as double,
-      discount: doc['discount'] as double,
+      price: doc['price'] as int? ?? 0,
+      discount: doc['discount'] as int? ?? 0,
       macros: Macros.fromEntity(MacrosEntity.fromDocument(doc['macros'] as Map<String, dynamic>)),
     );
   }
